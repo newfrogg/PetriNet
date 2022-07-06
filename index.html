@@ -6,10 +6,55 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PetriNet simulator</title>
+        <!-- UI configure -->
+        <script src="js/UI.js"></script>
+
     </head>
 
-    <body>
-        <h3>This is a Petrinet simulator.</h3>
+    <body onload="onload()">
+        <!-- Fixed nav bar -->
+        <div class="container">
+            <div class="navbar-header">
+                <a id="logo-link" style="cursor:pointer" onclick="javascript: window.location = 'index.html'">
+                    <img src="images/logo.png" alt="PetriNet logo" height="25"> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a id="Pnet-link" style="cursor:pointer" href="pnet.html">Petri net</a></li>
+                <li><a id="About-link" style="cursor:pointer" href="about.html">About</a></li>
+            </ul>
+        </div>
+        <!-- Begin page content -->
+        <div class="center-container">
+            <div class="center-row" id="center_row">
+                <!-- MAIN page content -->
+                <div class="container" style="height:100%; background-color:none; padding: 0 0 0 0;"></div>
+                <br>
+                <div class="page-header">
+                    <h1>PetriNet Simulator</h1>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                &nbsp;
+                <span id="status-bar" style="float:left; color:silver; font-size:12pt"></span>
+            </div>
+            <div class="container"></div>
+        </div>
     </body>
 
 </html>
+<script>
+    function onload() {
+        var elem = null;
+        elem = document.getElementById("logo-link");
+        elem.onmouseover = function () { set_status("Home page") };
+        elem.onmouseout = function () { set_status("") };
+        elem = document.getElementById("Pnet-link");
+        elem.onmouseover = function () { set_status("PetriNet simulator") };
+        elem.onmouseout = function () { set_status("") };
+        elem = document.getElementById("About-link");
+        elem.onmouseover = function () { set_status("About the web page") };
+        elem.onmouseout = function () { set_status("") };
+    }
+</script>
