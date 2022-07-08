@@ -8,20 +8,26 @@
         <title>PetriNet simulator</title>
         <!-- UI configure -->
         <script src="js/UI.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap_override.css">
 
     </head>
 
     <body onload="onload()">
         <!-- Fixed nav bar -->
-        <div class="container">
-            <div class="navbar-header">
-                <a id="logo-link" style="cursor:pointer" onclick="javascript: window.location = 'index.html'">
-                    <img src="images/logo.png" alt="PetriNet logo" height="25"> </a>
+        <div id="wrap">
+            <div class="container">
+                <div class="navbar-header">
+                    <a id="logo-link" style="cursor:pointer" onclick="javascript: window.location = 'index.html'">
+                        <img src="images/logo.png" alt="PetriNet logo" height="25"> </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a id="Pnet-link" style="cursor:pointer"
+                            onclick="javascript: window.location = 'pnet.html'">Petri net</a></li>
+                    <li><a id="About-link" style="cursor:pointer"
+                            onclick="javascript: window.location = 'about.html'">About</a></li>
+                </ul>
             </div>
-            <ul class="nav navbar-nav">
-                <li><a id="Pnet-link" style="cursor:pointer" onclick="javascript: window.location = 'pnet.html'">Petri net</a></li>
-                <li><a id="About-link" style="cursor:pointer" onclick="javascript: window.location = 'about.html'">About</a></li>
-            </ul>
         </div>
         <!-- Begin page content -->
         <div class="center-container">
